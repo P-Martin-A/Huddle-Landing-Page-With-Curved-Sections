@@ -1,0 +1,70 @@
+.contact {
+  @include laptop() {
+    width: 40%;
+  };
+
+  .content {
+    margin-bottom: 5rem;
+    @include laptop() {
+      margin-bottom: 2rem;
+    };
+
+    .title {
+      @include flex(center, flex-start);
+
+      .image {
+        margin-right: 1rem;
+      }
+
+      span {
+        color: $white;
+        font-size: 4.5rem;
+      }
+    }
+
+    .text {
+      color: $white;
+      font-size: 1.8rem;
+      line-height: 3rem;
+      @include laptop() {
+        font-size: 1.2rem;
+        width: 50%;
+      };
+    }
+  }
+
+  .info {
+    
+    .phone, .email {
+      color: $white;
+      margin: 2rem 0;
+      @include flex(center, flex-start);
+
+      .image {
+        margin-right: 2rem;
+      }
+
+      span {
+        font-size: 1.5rem;
+      }
+    }
+
+    .email {
+      @include laptop() {
+        margin-bottom: 5rem;
+      };
+    }
+  }
+
+  .social {
+    @include flex(center, flex-start);
+
+    .image {
+      margin-right: 1rem;
+      @include size(8%, auto);
+      @include laptop() {
+        margin-right: 2rem;
+      };
+    }
+  }
+}

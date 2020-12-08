@@ -1,0 +1,42 @@
+.followers {
+  text-align: center;
+  @include size(100%, 100vh);
+  @include flex() {
+    flex-direction: column;
+  };
+  @include laptop() {
+    flex-direction: row;
+    justify-content: space-around;
+  };
+
+  .content {
+    @include size(50%, 50%);
+    @include flex(start, center) {
+      flex-direction: column;
+    };
+    @include laptop() {
+      width: 20%;
+      align-items: center;
+    };
+
+    .image {
+      @include size(15%, 10%);
+      @include laptop() {
+        width: auto;
+        align-self: flex-start;
+      };
+    }
+
+    .title {
+      font-size: 8rem;
+      @include laptop() {
+        font-size: 10rem;
+      };
+    }
+
+    .text {
+      align-self: center;
+      font-size: 1.8rem;
+    }
+  }
+}

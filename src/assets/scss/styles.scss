@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+// TOOLS 
+@import './tools/var';
+@import './tools/mixins';
+
+// BASE
+@import './base/base';
+
+// LAYOUTS
+@import './layouts/header';
+@import './layouts/main';
+@import './layouts/footer';
+
+// COMPONENTS
+@import './components/hero';
+@import './components/followers';
+@import './components/grow';
+@import './components/flowing';
+@import './components/users';
+@import './components/ready';
+@import './components/newsletter';
+@import './components/contact';

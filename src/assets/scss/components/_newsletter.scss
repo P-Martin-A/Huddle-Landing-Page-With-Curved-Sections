@@ -1,0 +1,78 @@
+.newsletter {
+  margin-bottom: 10rem;
+  @include laptop() {
+    margin: 0;
+    width: 40%;
+  };
+
+  .content, .form {
+    @include size(100%, 50%);
+  }
+  
+  .content {
+    margin-bottom: 5rem;
+
+    .title, .text {
+      color: $white;
+    }
+    
+    .title {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .text {
+      font-size: 2rem;
+      @include laptop() {
+        font-size: 1.5rem;
+        width: 80%;
+      };
+    }
+  }
+
+  .form {
+
+    .form-group {
+      @include size();
+      @include flex() {
+        flex-direction: column;
+      };
+      @include laptop() {
+        justify-content: left;
+        flex-direction: row;
+      };
+
+      input[type="text"] {
+        width: 100%;
+        padding: 2rem 2.5rem;
+        border-radius: .5rem;
+        border: none;
+        outline: none;
+        background-color: $white;
+        margin-bottom: 2rem;
+        @include laptop() {
+          width: 60%;
+          margin: 0 2rem 0 0;
+        };
+      }
+
+      .btn {
+        align-self: end;
+        display: inline-block;
+        font-size: 2rem;
+        background-color: $pink;
+        color: $white;
+        padding: 1.2rem 4rem;
+        border-radius: .5rem;
+        @include laptop() {
+          width: 40%;
+          padding: 1.5rem 4rem;
+        };
+
+        &:hover {
+          background-color: $light-pink;
+        }
+      }      
+    }
+  }
+}

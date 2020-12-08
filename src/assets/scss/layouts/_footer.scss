@@ -1,0 +1,21 @@
+.footer {
+  position: relative;
+  background-color: $very-dark-cyan;
+  @include laptop() {
+    @include flex(center, space-between) {
+      flex-direction: row-reverse;
+    };
+  };
+
+  .wavy {
+    background: url('../images/bg-footer-top-mobile.svg') no-repeat center / cover; 
+    position: absolute;
+    left: 0;
+    top: -5rem;
+    @include size(100%, 6rem);
+    @include laptop() {
+      top: -20rem;
+      height: 20rem;
+    }
+  }
+}

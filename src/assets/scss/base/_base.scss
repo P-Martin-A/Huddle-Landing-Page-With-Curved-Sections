@@ -1,0 +1,50 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+
+  body {
+    font-family: $font-body;
+    background-color: $white;
+
+    header {
+      font-family: $font-heading;
+    }
+
+    h1, h2, h3, h4 {
+      color: $very-dark-cyan;
+      font-weight: $font-weight-700;
+    }
+
+    p {
+      color: $very-pale-blue;
+      font-weight: $font-weight-400;
+    }
+    
+    ul li {
+      list-style: none;
+    }
+    
+    a {
+      text-decoration: none;
+      font-weight: $font-weight-600;
+    }
+
+    .container {
+      padding: 2rem 3rem;
+      @include tablet() {
+        padding: 4rem;
+      }
+      @include laptop() {
+        padding: 6rem;
+      }
+      @include desktop() {
+        padding: 8rem;
+      }
+    }
+  }
+}

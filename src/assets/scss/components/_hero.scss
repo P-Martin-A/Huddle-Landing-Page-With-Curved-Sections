@@ -1,0 +1,55 @@
+.hero {
+  text-align: center;
+
+  .content {
+    margin: 10rem 0 6rem 0;
+
+    .title, .text, .btn {
+      margin-bottom: 4rem;
+    }
+
+    .title {
+      font-size: 3rem;
+      @include laptop() {
+        font-size: 4rem;
+      };
+    }
+    
+    .text {
+      font-size: 1.8rem;
+      line-height: 2.5rem;
+      @include laptop() {
+        @include size(50%, auto);
+        margin: auto;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      };
+    }
+    
+    .btn {
+      display: inline-block;
+      font-size: 1.5rem;
+      background-color: $pink;
+      color: $white;
+      padding: 1.2rem 5rem;
+      border-radius: 3rem;
+      box-shadow: 0 1rem 4rem $very-pale-blue;
+      @include laptop() {
+        font-size: 1.8rem;
+        padding: 1.8rem 8rem;
+        box-shadow: none;
+      };
+
+      &:hover {
+        background-color: $light-pink;
+      }
+    }
+  }
+
+  .image {
+    @include size(100%, auto);
+    @include laptop() {
+      @include size(80%, auto);
+    };
+  }
+}

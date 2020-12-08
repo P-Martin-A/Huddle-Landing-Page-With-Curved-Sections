@@ -1,0 +1,29 @@
+.header {
+  @include flex(center, space-between);
+
+  .title {
+    @include size(30%, auto);
+    @include laptop() {
+      @include size(20%, auto);
+    };
+
+    .logo {
+      @include size();
+    }
+  }
+
+  .btn {
+    color: $light-pink;
+    border: .1rem solid $light-pink;
+    border-radius: 2rem;
+    padding: .5rem 2rem;
+    @include laptop() {
+      font-size: 1.5rem;
+    };
+
+    &:hover {
+      color: $pink;
+      border-color: $pink;
+    }
+  }
+}
